@@ -17,7 +17,7 @@ class Student
       )
     SQL
     
-    
+    DOC[:]
   end
   
   def self.drop_table
