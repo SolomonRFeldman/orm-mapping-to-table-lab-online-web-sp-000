@@ -13,7 +13,7 @@ class Student
       INSERT INTO students(name, grade)
       VALUES (?, ?)
     SQL
-    DOC[:conn].execute(sql, self.name, self.grade)
+    DB[:conn].execute(sql, self.name, self.grade)
     
   end
   
@@ -25,12 +25,12 @@ class Student
         grade INTEGER
       );
     SQL
-    DOC[:conn].execute(sql)
+    DB[:conn].execute(sql)
   end
   
   def self.drop_table
     sql = "DROP TABLE students;"
-    DOC[:conn].execute(sql)
+    DB[:conn].execute(sql)
   end
 
 end
