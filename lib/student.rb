@@ -13,6 +13,7 @@ class Student
       INSERT INTO students(name, grade)
       VALUES (?, ?)
     SQL
+    DOC[:conn].execute(sql, @name, @grade)
   end
   
   def self.create_table
