@@ -18,7 +18,8 @@ class Student
   end
   
   def self.create(name, grade)
-    student = S
+    student = Student.new(name, grade)
+    student.save
   end
   
   def self.create_table
