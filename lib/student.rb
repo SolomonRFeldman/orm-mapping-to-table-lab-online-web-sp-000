@@ -8,19 +8,22 @@ class Student
     @id = id
   end
   
+  def save
+  
   def self.create_table
     sql = <<-SQL
       CREATE_TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
         name TEXT,
         grade INTEGER
-      )
+      );
     SQL
     DOC[:conn].execute(sql)
   end
   
   def self.drop_table
-    sql = "DROP TABLE students"
+    sql = "DROP TABLE students;"
+    DOC[:conn].execute(sql)
   end
 
 end
