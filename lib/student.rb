@@ -9,7 +9,10 @@ class Student
   end
   
   def save
-    
+    sql = <<-SQL
+      INSERT
+    SQL
+  end
   
   def self.create_table
     sql = <<-SQL
