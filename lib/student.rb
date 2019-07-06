@@ -14,6 +14,7 @@ class Student
       VALUES (?, ?)
     SQL
     DOC[:conn].execute(sql, self.name, self.grade)
+    
   end
   
   def self.create_table
